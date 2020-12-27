@@ -84,7 +84,6 @@ body{
 
 /* WHY US */
 .why{
-    border: 1px solid black;
     margin: 0;
     height: auto;
     grid-area: why;
