@@ -1,0 +1,120 @@
+:root{
+    /* Primary */
+    --cyan: hsl(179, 62%, 43%);
+    --brightYellow: hsl(71, 73%, 54%);
+    /* Neutral */
+    --lightGray: hsl(204, 43%, 93%);
+    --grayishBlue: hsl(218, 22%, 67%);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}
+
+.container{
+    border-radius: 10px;
+    max-width: 800px;
+    height: auto;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "com com"
+                         "subs why";
+    -webkit-box-shadow: 0px 5px 15px -3px #000000; 
+    box-shadow: 0px 5px 15px -3px #000000;
+}
+
+/* COMMUNITY */
+.community{
+    grid-area: com;
+    margin-top: 30px;
+    background: white;
+}
+.community h1{
+    color: var(--cyan);
+}
+.community h3{
+    font-size: 25px;
+    color: var(--brightYellow);
+}
+.community p{
+    font-size: 18px;
+    color: var(--grayishBlue);
+    line-height: 30px;
+}
+
+/* SUBSCRIPTION */
+.subscription{
+    height: auto;
+    grid-area: subs;
+    background: var(--cyan);
+    color: white;
+}
+.subscription-price{
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+.subscription-price h4 {
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+}
+.subscription-price p{
+    color: var(--lightGray);
+    font-weight: 400;
+    margin: 0 10px;
+}
+.subscription p{
+    font-size: 18px;
+}
+.subscription button{
+    width: 100%;
+    padding: 1.5em;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    background: var(--brightYellow);
+    border: none;
+    margin: 15px 0;
+}
+
+/* WHY US */
+.why{
+    border: 1px solid black;
+    margin: 0;
+    height: auto;
+    grid-area: why;
+    background-color: rgb(88, 199, 186);
+}
+.why h2{
+    color: white;
+}
+.why p{
+    color: var(--lightGray);
+    line-height: 10px;
+}
+.why-text{
+    margin-top: 35px;
+}
+
+.community, .subscription, .why{
+    padding: 10px 40px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width:600px){
+    .container{
+        margin: 0;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "com"
+                             "subs"
+                             "why";
+    }
+}
